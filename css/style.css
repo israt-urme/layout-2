@@ -66,12 +66,12 @@ body {
 }
 
 .menu-toggle-icon::before {
-    content: url(/img/menu.png);
+    content: url(../img/menu.png);
     cursor: pointer;
 }
 
 .menu-toggle-icon.activee::before {
-    content: url(/img/close.png);
+    content: url(../img/close.png);
 }
 
 .header1.activee {
@@ -308,7 +308,7 @@ h3 {
 
 /* ....part5.... */
 .dayset{
-    background-image: url("/img/banner2.jpg");
+    background-image: url("../img/banner2.jpg");
     height: 70vh;
     width: 100%;
     background-size: cover;
