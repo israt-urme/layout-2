@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 330px 0;
+    padding: 30px 5%;
 }
 
 .logo {
@@ -86,7 +86,8 @@ body {
 /* first slider */
 .home .carousel-item img {
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
+    object-fit: cover;
 }
 
 .home .carousel-controls {
@@ -152,9 +153,11 @@ body {
     border-radius: 2px;
 }
 
-.about h2,
-h3 {
-    font-size: 62px;
+.about h2 {
+    font-size: 3rem;
+}
+.about h3 {
+    font-size: 2rem;
 }
 
 .about h2 {
@@ -187,9 +190,17 @@ h3 {
 
 .column1,
 .column2 {
-    float: left;
-    width: 50%;
     height: 70vh;
+}
+
+.colomn-slider {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1,
+.column2 {
+    width: 50%;
 }
 
 .column2 img {
@@ -336,7 +347,10 @@ h3 {
     background-color: rgb(241, 241, 241);
 }
 .gallery-container{
-    padding: 0 200px;
+    /* padding: 0 200px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 .row .random img{
     height: 81vh;
@@ -404,7 +418,9 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
-    .header1,
+    .header1 {
+        padding: 20px 15px;
+    }
     .navbar-extral {
         padding: 30px 30px 0;
     }
@@ -428,6 +444,12 @@ h3 {
     }
 
     /* part2 */
+    .about h2 {
+        font-size: 2rem;
+    }
+    .about h3 {
+        font-size: 1.5rem;
+    }
     .about h2,
     h3 {
         font-size: 45px;
@@ -437,6 +459,11 @@ h3 {
     }
 
     /* part3 */
+
+    .column1,
+    .column2 {
+        width: 100%;
+    }
     
     .column1 {
         padding: 50px 15px 0;
@@ -460,6 +487,7 @@ h3 {
     .row .random img{
         width: 100%;
         height: auto;
+        object-fit: cover;
     }
 
 }
